@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "pexels-adrienn",
+    "image": "/src/assets/images/gallery/speloe-0.jpg",
+    "alt": "Выпускные в Speloe "
+  },
+  {
+    "id": 3,
+    "title": "pexels-enginakyurt",
+    "image": "/src/assets/images/gallery/speloe-2.jpg",
+    "alt": "Выпускные в Speloe 2"
+  },
+  {
+    "id": 4,
+    "title": "pexels-fariphotography",
+    "image": "/src/assets/images/gallery/speloe-3.jpg",
+    "alt": "Выпускные в Speloe 3"
+  },
+  {
+    "id": 5,
+    "title": "pexels-narda-yescas",
+    "image": "/src/assets/images/gallery/speloe-4.jpg",
+    "alt": "Выпускные в Speloe 4"
+  },
+  {
+    "id": 6,
+    "title": "pexels-pixabay",
+    "image": "/src/assets/images/gallery/speloe-5.jpg",
+    "alt": "Выпускные в Speloe 5"
+  },
+  {
+    "id": 7,
+    "title": "pexels-rachel-claire",
+    "image": "/src/assets/images/gallery/speloe-6.jpg",
+    "alt": "Выпускные в Speloe 6"
+  }
+]

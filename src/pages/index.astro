@@ -1,0 +1,444 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Hero from "~/components/Hero.astro";
+import { Picture, Image } from "astro:assets";
+import Badge from "~/components/Badge.astro";
+import Button from "~/components/Button.astro";
+import GalleryBlock from "~/components/GalleryBlock.astro";
+import ButtonCallUs from "~/components/ButtonCallUs.astro";
+import Grid from "~/components/Grid.astro";
+import Heading from "~/components/Heading.astro";
+import WideImage from "~/components/WideImage.astro";
+import ReviewSlider from "~/components/ReviewSlider.astro";
+import FormBook from "~/components/forms/FormBook.astro";
+import heroImg from '../assets/images/выпускные.png'
+import { getCollection } from "astro:content";
+import 'animate.css';
+
+// Images
+import PizzaHero from "~/assets/images/pizza-hero.png";
+import Pizza from "~/assets/images/pizza.png";
+import Spaghetti from "~/assets/images/spaghetti.png";
+import Fish from "~/assets/images/fish.png";
+import reviewAuthors from "~/assets/images/review-authors.png";
+import Dessert from "~/assets/images/dessert.png";
+import Mussels from "~/assets/images/mussels2.png";
+
+const gallery = await getCollection("gallery");
+const params = [
+	'2 собственные игровые площадки 400м² в двух районах города;',
+	'Большой выбор квестов и вечеринок для любого возраста;',
+	'Можно со своей едой и напитками;',
+	'Более 80 персонажей;'
+]
+---
+
+<Layout title="Выпускной 2025" pageTitle="Выпускной" description="Волшебный выпускной с уникальными программами, аниматорами, квестами, приставками и настолками. Устройте незабываемый утренник или вечеринку для своих детей!">
+	<Hero>
+			<div slot="hero-content-left" class="prose">
+				<p class="animate__animated animate__fadeInDown text-xl font-black lg:mt-8 sm:text-3xl text-[#277eb5] uppercase mb-0 lg:ml-1">Организуем волшебный</p>
+				<h1 class="animate__animated animate__flipInX lg:my-3 my-1 text-4xl font-black text-[#ff6711] sm:text-5xl xl:text-7xl uppercase">Выпускной</h1>
+				<p class="animate__animated animate__fadeInUp text-xl font-black sm:text-3xl text-[#277eb5] uppercase mt-0 lg:ml-1">для 4, 9 и 11 классов</p>
+					<div class=" mt-4 lg:mt-8">
+					{params.map((param: any) => <div class="flex flex-row text-base text-black sm:text-xl">
+						<svg class="my-2" width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.421 11.616c.037-.059-.015-.214.135-.096.112.103.212.208.307.317l.279.335c.183.222.378.446.602.606l.044-.101.515.559.571.607.335.274 1.06-2.544c-.037-.013-.065-.039-.032-.146.043-.102.086-.218.142-.323.058-.104.12-.213.186-.325l.209-.351.227-.33.114-.21c.013-.062-.014-.09-.03-.11.04-.06.05-.066.07-.095.02-.024.04-.047.057-.07l.11-.127c.624-1.215 1.452-2.446 2.504-3.73.184-.299.375-.597.602-.855.356-.366.913-.759 1.311-1.082-.352-.176.45-1.094-.035-1.163.265-.215.66-.539.596-.62-.191-.243-.277-.633.231-1.33.223-.255.715-.531.75-.65.056-.187-.507.168-.449-.018-1.94 1.633-3.879 3.286-5.838 5.198-.19.274-.91 1.037-1.696 2.04a22.41 22.41 0 00-.883 1.212l-.054.094a4.832 4.832 0 00-.11.23c-.006.013-.013.025-.018.038-.009.002-.021-.017-.03-.024a.504.504 0 01-.117-.17l-.012-.008a.36.36 0 00-.046-.067l-.038-.039-.046-.05-.117-.132a6.51 6.51 0 00-.997-.925 12.034 12.034 0 00-1.011-.571c.073.146.133.286.177.41-.25-.25-.514-.492-.671-.54-.71-.392-.514.005-.5.34.065.199-.271.125-.13.399-.162-.15-.246-.224-.415-.371-.098.045.568.413.312.416-.128-.165-.362-.28-.53-.423-.044.134.546.524.406.589-.109-.059-.32-.52-.489-.435-.033.017.133.158.214.23-.279-.2-.528-.326-.66-.34-.134-.014-.15.081.013.328-.157-.133-.34-.361-.54-.477v.003c.086.07.214.207.293.27a10.767 10.767 0 00-.298-.231.72.72 0 000 .087c.062.068.123.137.198.197l-.194-.153c.009.074.026.153.049.232.15.25.235.527.349.627a15.163 15.163 0 011.503 1.673l.319.42.576.755c.203.26.408.512.62.746z" fill="#277EB5"/></svg>
+										<div class="ml-2">{param}</div>
+									</div>)}
+					</div>
+	
+					<a href="#" title="" class="animate__animated animate__rubberBand inline-flex no-underline items-center px-6 py-4 mt-8 font-[Flow] text-white text-lg transition-all duration-200 rounded-lg lg:mt-10 hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-2xl shadow-[#ff6711] hover:shadow-lg" role="button">
+						Подобрать программу
+						<svg class="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</a>
+	
+					<!-- <p class="mt-5 text-gray-600">Отправим вместе со стоимостью, сценарием и вариантами проведения</p> -->
+			</div>
+			<div slot="hero-content-right">
+				<Image class="animate__animated animate__bounceInRight w-full" src={heroImg} loading="eager" alt="выпускные в Ульяновске" />
+			</div>
+	</Hero>
+
+	<GalleryBlock />
+
+	<Section class:list={"bg-white"}>
+		<Heading>
+			<h2 slot="heading-title" class="font-bold text-[#ff6711] uppercase h2">Выберите наполнение</h2>
+			<!-- <p slot="heading-content">
+				Explore our selection of authentic Italian dishes, from classic pizzas to homemade pastas.
+			</p> -->
+		</Heading>
+
+		
+		<!-- Component: Basic Pricing Table with Details -->
+		 <div class="flex justify-center mb-24">
+				<div class="max-w-md mx-6 bg-white rounded shadow-lg text-slate-500 shadow-slate-200 lg:max-md-full">
+					<div class="flex flex-col">
+					<header class="flex flex-col gap-6 p-6 text-slate-400">
+						<h3 class="text-3xl font-bold text-slate-700">
+						Пакет СТАНДАРТ
+						<span class="block text-sm font-normal text-slate-400">Можно со своей едой и напитками</span>
+						</h3>
+						<h4>
+						<span class="text-5xl font-bold tracking-tighter transition-all duration-300 text-slate-700 lg:text-6xl">17 900</span>
+						<span class="text-3xl">₽</span>
+						</h4>
+					</header>
+					<div class="p-6 text-lg">
+						<p>Аренда отдельной банкетной зоны на 2.5 часа пребывания (до 20 человек)</p>
+						<p class="font-bold mt-2 text-right">+ приставки,настольные игры</p>
+					</div>
+					<div class="p-6">
+						<ul class="space-y-4 text-lg">
+							<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+								<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							2 ведущих
+							</li>
+						<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							Программа на выбор
+						</li>
+						<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							Музыкальное сопровождение
+						</li>
+						<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							3 сопровождающих бесплатно
+						</li>
+						</ul>
+						<p class="text-sm text-gray-400 mt-8">До 20 человек, доплата за последующего участника программы - 800р. В стоимость входит бесплатное пребывание 3 родителей, доплата за последующих - 100р.</p>
+						<a href="#" title="" class="w-full inline-flex no-underline items-center justify-center px-6 py-4 mt-8 font-[Flow] text-white text-lg transition-all duration-200 rounded-lg lg:mt-10 hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-lg shadow-[#ff6711] hover:shadow-lg" role="button">
+							Заказать программу
+						</a>
+					</div>
+					</div>
+				</div>
+
+				<div class="max-w-md mx-6 overflow-hidden bg-white rounded shadow-lg text-slate-500 shadow-slate-200 lg:max-md-full">
+					<div class="flex flex-col">
+					<header class="flex flex-col gap-6 p-6 text-slate-400">
+						<h3 class="text-3xl font-bold text-slate-700">
+						Пакет РАСШИРЕННЫЙ
+						<span class="block text-sm font-normal text-slate-400">Можно со своей едой и напитками</span>
+						</h3>
+						<h4>
+						<span class="text-5xl font-bold tracking-tighter transition-all duration-300 text-slate-700 lg:text-6xl">20 900</span>
+						<span class="text-3xl">₽</span>
+						</h4>
+					</header>
+					<div class="p-6 text-lg">
+						<p>Аренда отдельной банкетной зоны на 3 часа пребывания (до 20 человек)</p>
+						<p class="font-bold mt-2 text-right">+ приставки,настольные игры</p>
+					</div>
+					<div class="p-6">
+						<ul class="space-y-4 text-lg">
+							<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+								<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							2 ведущих
+							</li>
+						<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							Программа на выбор
+						</li>
+						<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							Музыкальное сопровождение
+						</li>
+						<li class="flex items-start gap-2 font-bold">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							Серебряная дискотека
+						</li>
+						<li class="flex items-start gap-2">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 p-1 shrink-0 text-[#277eb5]" aria-hidden="true">
+							<path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+							</svg>
+							3 сопровождающих бесплатно
+						</li>
+						</ul>
+						<p class="text-sm text-gray-400 mt-8">До 20 человек, доплата за последующего участника программы - 800р. В стоимость входит бесплатное пребывание 3 родителей, доплата за последующих - 100р.</p>
+						<a href="#" title="" class="w-full inline-flex no-underline items-center justify-center px-6 py-4 mt-8 font-[Flow] text-white text-lg transition-all duration-200 rounded-lg lg:mt-10 hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-lg shadow-[#ff6711] hover:shadow-lg" role="button">
+							Заказать программу
+						</a>
+					</div>
+					</div>
+				</div>
+  </div>
+  <!-- End Basic Pricing Table with Details -->
+
+		
+	</Section>
+
+	<Section class:list={"bg-white"}>
+		<Heading>
+			<h2 slot="heading-title" class="font-bold text-[#ff6711] uppercase h2">Программы на выбор</h2>
+		</Heading>
+		<Hero>
+			<div slot="hero-content-left" class="prose lg:order-2">
+				<Badge title="подходит для 1-4 класса" />
+				<h2 class="font-black h2 my-4">Зов джунглей</h2>
+
+				<p>
+					В программе:
+				</p>
+				<p>Два ведущих - исследователя</p>
+
+				<p>
+					Ребята столкнутся с хитроумными ловушками и препятствиями, чтобы проверить свои силы от стрельбы из лука, до сбора экзотических фруктов.
+				</p>
+
+				<p>🎊 Программа идеально подходит для детей до 9 лет, гарантируя, что каждый малыш найдет что-то по душе</p>
+
+				<p>🌿 Давайте вместе покорим джунгли</p>
+
+				<div class="mt-8">
+					<Button url="/menu">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="size-5 inline-block"
+							aria-hidden="true"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+								clip-rule="evenodd"></path>
+						</svg>
+						View menu
+					</Button>
+				</div>
+			</div>
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={PizzaHero}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+				<p class="italic">Маленькие исследователи станут настоящими профессионалами! Вместе с нашими героями они отправятся в захватывающее путешествие, полное неожиданностей и приключений.</p>
+			</div>
+		</Hero>
+	</Section>
+
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="подходит для 1-4 класса" />
+				<h2 class="font-black h2 my-4">Game вечеринка</h2>
+
+				<p>В программе:</p>
+
+				<p class="mb-2">Два ведущих на выбор:
+				</p>
+				<p class="text-brand-red text-2xl font-bold italic mt-2">Бравл Старс, Майнкрафт или Роблакс</p>
+
+				<p>
+					Викторины по игровым мирам, где каждый сможет продемонстрировать свои знания и заработать призы
+				</p>
+
+				<p>💃 Танцевальные челенджи. Показать свои лучшие движения и весело провести время с друзьями.</p>
+
+				<p>🏃‍♂️ Эстафеты, где команды будут сражаться за титул "Лучших геймеров".</p>
+
+				<div class="mt-8">
+					<Button color="red" url="/book">Book now</Button>
+				</div>
+			</div>
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={Mussels}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+				<p class="italic">Приглашаем всех юнных геймеров погрузиться в увлекательный мир своих любимых игр: Амонг Ас, Майнкрафт, Роблакс и Бравл Старс! Приготовьтесь к незабываемому времени, полному развлечений, дружбы и веселья.</p>
+			</div>
+		</Hero>
+	</Section>
+
+	<!-- Reviews -->
+	<Section class:list={"bg-brand-red/20 relative"}>
+		<div class="py-16">
+			<Hero>
+				<div slot="hero-content-left" class="prose max-w-none order-2">
+					<div class="text-center not-prose">
+						<Badge color="white" title="reviews" />
+					</div>
+					<h2 slot="heading-title" class="font-black h4 text-center mt-0 mb-4">What our customers say...</h2>
+					<div slot="heading-content">
+						<p class="text-center">
+							Don't just take our word for it. Read what our customers have to say about their dining
+							experience at our restaurant.
+						</p>
+
+						<ReviewSlider />
+					</div>
+				</div>
+
+				<div slot="hero-content-right">
+					<Picture src={reviewAuthors} alt="Review authors" class="w-full h-auto" />
+				</div>
+			</Hero>
+		</div>
+
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			class="absolute h-40 w-full top-0 inset-x-0 rotate-180"
+			preserveAspectRatio="none"
+			><path
+				fill="#ffffff"
+				fill-opacity="1"
+				d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+			></path>
+		</svg>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 1440 320"
+			class="absolute h-40 w-full bottom-0 inset-x-0"
+			preserveAspectRatio="none"
+			><path
+				fill="#ffffff"
+				fill-opacity="1"
+				d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+			></path>
+		</svg>
+	</Section>
+
+	<!-- Desserts -->
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none order-2">
+				<Badge title="подходит для 5-7 класса" />
+				<h2 slot="heading-title" class="font-black text-brand-green h2 my-4">Форт Боярд</h2>
+				<div slot="heading-content">
+					<p>В программе:</p>
+
+				<p class="text-xl font-bold italic text-brand-red">Два ведущих - <span class="text-brand-green">хранителей башни Форта</span>
+				</p>
+					<p>
+						Загадки и ребусы, которые проверят вашу смекалку и находчивость.
+					</p>
+
+					<p>
+						Командные состязания, в которых вы сможете прявить свои лидерские качества и командный дух.
+					</p>
+
+					<p>Тематический реквизит по мотивам передачи: от тараканьих бегов, до сокровищницы.</p>
+
+					<div class="mt-8">
+						<Button url="/menu">See our menu</Button>
+					</div>
+				</div>
+			</div>
+
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={Dessert}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/><p class="italic">Хотите ощутить себя участником легендарной передачи? Теперь у вас есть такая возможность! Подготовьтесь к незабываемым испытаниям.</p>
+			</div>
+		</Hero>
+	</Section>
+
+	<!-- Contact -->
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none">
+				<Badge color="red" title="подходит для 5-7 класса" />
+				<h2 slot="heading-title" class="font-black text-brand-red h2 my-4">Недетские игры</h2>
+				<p class="mt-2">по мотивам сериала "Игра кальмара"</p>
+				<div slot="heading-content">
+					<p>
+						В программе:
+					</p>
+
+					<p>
+						✔ Игра "Тише едешь, дальше будешь" - проверьте свою внимательность и умение сохранять спокойствие в самых неожиданных моментах.
+					</p>
+					<p>
+						✔ Сложные ребусы, которые требуют логического мышления и навыков решения загадок - настоящая находка для маленьких интеллектуалов.
+					</p>
+					<p>Это не только приключение, но и отличная возможность для детей поработать в команде, развивать дружеские отношения и, конечно, весело провести время.</p>
+
+					<div class="mt-8">
+						<Button color="red" url="/book">Book a table</Button>
+					</div>
+				</div>
+			</div>
+
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={Dessert}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+				<p class="italic">Готовы к незабываемым испытаниям? Приглашаем вас на квест по мотивам сериала "Игра кальмара", адаптированный специально для детей.</p>
+			</div>
+		</Hero>
+	</Section>
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none order-2">
+				<Badge title="подходит для 5-7 класса" />
+				<h2 slot="heading-title" class="font-black text-brand-green h2 my-4">Top Party 2025</h2>
+				<div slot="heading-content">
+					<p>В программе:</p>
+
+				<p class="text-xl font-bold italic text-brand-red">Два зажигательных ведущих<span class="text-brand-green">хранителей башни Форта</span>
+				</p>
+					<p>
+						✔ Викторины по игровым мирам, социальным сетям.
+					</p>
+					<p>
+						✔ 💃 Танцевальные битвы. Показать свои лучшие движения и весело провести время с друзьями.
+					</p>
+					<p>
+						✔ 🏃‍♂️ Трендовые челенджи из социальных сетей: откуси - лизни, кажется нащупал.
+					</p>
+
+					<div class="mt-8">
+						<Button url="/menu">See our menu</Button>
+					</div>
+				</div>
+			</div>
+
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={Dessert}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/><p class="italic">Хотите ощутить себя участником легендарной передачи? Теперь у вас есть такая возможность! Подготовьтесь к незабываемым испытаниям.</p>
+			</div>
+		</Hero>
+	</Section>
+	<FormBook />
+</Layout>
