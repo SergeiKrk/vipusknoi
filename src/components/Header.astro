@@ -31,7 +31,10 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 				</a>
 				<div class="flex-col text-sm ml-4 hidden lg:flex w-[260px]">
 					<div>Организация детских праздников на собственной площадке</div>
-					<div class="flex flex-row"><svg class="my-1" width="9" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5C9 6.985 4.5 12 4.5 12S0 6.985 0 4.5a4.5 4.5 0 019 0z" fill="#277EB5"/><path d="M6 4.5c0 .828-1.5 2-1.5 2S3 5.328 3 4.5a1.5 1.5 0 113 0z" fill="#fff"/></svg><div class="ml-1 font-bold text-[#277eb5]">ул. Дворцовая 4а;</div></div>
+					<div class="flex flex-row">
+						<svg class="my-1" width="9" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5C9 6.985 4.5 12 4.5 12S0 6.985 0 4.5a4.5 4.5 0 019 0z" fill="#277EB5"/><path d="M6 4.5c0 .828-1.5 2-1.5 2S3 5.328 3 4.5a1.5 1.5 0 113 0z" fill="#fff"/></svg>
+						<div class="ml-1 font-bold text-[#277eb5]">ул. Дворцовая 4а;</div>
+					</div>
 					<div class="flex flex-row"><svg class="my-1" width="9" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5C9 6.985 4.5 12 4.5 12S0 6.985 0 4.5a4.5 4.5 0 019 0z" fill="#277EB5"/><path d="M6 4.5c0 .828-1.5 2-1.5 2S3 5.328 3 4.5a1.5 1.5 0 113 0z" fill="#fff"/></svg><div class="ml-1 font-bold text-[#277eb5]">Ульяновский пр-т 16</div></div>
 				</div>
 			</div>
@@ -63,7 +66,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 					menuMain.map((item) => (
 						<a
 							href={item.url}
-							class={`transition text-base/6 font-semibold hover:text-brand-green ${item.highlighted ? "menu-item-highlighted" : ""} ${pathname === item.url ? "menu-item-active" : ""}`}
+							class={`transition text-base/6 font-semibold hover:text-[#277eb5] ${item.highlighted ? "menu-item-highlighted" : ""} ${pathname === item.url ? "menu-item-active" : ""}`}
 						>
 							{item.name}
 						</a>
@@ -133,6 +136,14 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							<div>
 								<svg class="my-1 inline-block" width="9" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.5C9 6.985 4.5 12 4.5 12S0 6.985 0 4.5a4.5 4.5 0 019 0z" fill="#277EB5"/><path d="M6 4.5c0 .828-1.5 2-1.5 2S3 5.328 3 4.5a1.5 1.5 0 113 0z" fill="#fff"/></svg>
 								<div class="ml-1 font-bold inline-block text-[#277eb5]">Ульяновский пр-т 16;</div>
+							</div>
+							<div class="flex flex-col text-center mt-12">
+								<a class="text-[#ff6711] font-sans font-medium text-2xl" href="tel:+79176113743">
+									+7 917 611-37-43
+								</a>
+								<a class="text-md font-bold" href="mailto:speloe-kafe@yandex.ru">
+									speloe-kafe@yandex.ru
+								</a>
 							</div>
 						</div>
 					</div>

@@ -1,22 +1,22 @@
 export const menuMain = [
   {
-    name: "Home",
-    url: "/",
+    name: "Тарифы",
+    url: "#rates",
     highlighted: false,
   },
   {
-    name: "Menu",
-    url: "/menu",
+    name: "Программы",
+    url: "#programs",
     highlighted: false,
   },
   {
-    name: "About Us",
-    url: "/about-us",
+    name: "Отзывы",
+    url: "#reviews",
     highlighted: false,
   },
   {
-    name: "Gallery",
-    url: "/gallery",
+    name: "Интерьер",
+    url: "#interior",
     highlighted: false,
   },
 ];
