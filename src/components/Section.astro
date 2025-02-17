@@ -3,7 +3,7 @@ const { id, class: className, contain = true } = Astro.props;
 ---
 
 <section id={id} class={className}>
-	<div class={`${contain ? "container py-16 lg:py-32" : ""}`}>
+	<div class={`${contain ? "lg:container py-16 lg:py-32" : ""}`}>
 		<slot />
 	</div>
 </section>

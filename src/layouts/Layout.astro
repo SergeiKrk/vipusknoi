@@ -6,6 +6,7 @@ import Footer from "~/components/Footer.astro";
 const { pageTitle, title, description } = Astro.props;
 const baseUrl = `${Astro.url.protocol}//${Astro.url.host}`;
 import { siteLang, themeColor } from "~/data/config";
+import FeedbackWidget from "~/components/FeedbackWidget.astro";
 ---
 
 <!doctype html>
@@ -81,5 +82,6 @@ import { siteLang, themeColor } from "~/data/config";
 			<slot />
 		</main>
 		<Footer />
+		<FeedbackWidget />
 	</body>
 </html>

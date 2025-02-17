@@ -6,7 +6,7 @@ import { Picture, Image } from "astro:assets";
 import Badge from "~/components/Badge.astro";
 import Button from "~/components/Button.astro";
 import GalleryBlock from "~/components/GalleryBlock.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
+import ButtonCallUs from "~/components/ButtonCall.astro";
 import Grid from "~/components/Grid.astro";
 import Heading from "~/components/Heading.astro";
 import WideImage from "~/components/WideImage.astro";
@@ -18,12 +18,10 @@ import 'animate.css';
 
 // Images
 import PizzaHero from "~/assets/images/pizza-hero.png";
-import Pizza from "~/assets/images/pizza.png";
-import Spaghetti from "~/assets/images/spaghetti.png";
-import Fish from "~/assets/images/fish.png";
 import reviewAuthors from "~/assets/images/review-authors.png";
 import Dessert from "~/assets/images/dessert.png";
 import Mussels from "~/assets/images/mussels2.png";
+import ButtonOrder from "~/components/ButtonOrder.astro";
 
 const gallery = await getCollection("gallery");
 const params = [
@@ -73,8 +71,8 @@ const params = [
 
 		
 		<!-- Component: Basic Pricing Table with Details -->
-		 <div class="flex justify-center mb-24">
-				<div class="max-w-md mx-6 bg-white rounded shadow-lg text-slate-500 shadow-slate-200 lg:max-md-full">
+		 <div class="flex flex-col lg:flex-row justify-center mb-24">
+				<div class="max-w-md mt-6 mx-6 bg-white rounded shadow-lg text-slate-500 shadow-slate-200 lg:max-md-full">
 					<div class="flex flex-col">
 					<header class="flex flex-col gap-6 p-6 text-slate-400">
 						<h3 class="text-3xl font-bold text-slate-700">
@@ -125,7 +123,7 @@ const params = [
 					</div>
 				</div>
 
-				<div class="max-w-md mx-6 overflow-hidden bg-white rounded shadow-lg text-slate-500 shadow-slate-200 lg:max-md-full">
+				<div class="max-w-md mx-6 mt-6 overflow-hidden bg-white rounded shadow-lg text-slate-500 shadow-slate-200 lg:max-md-full">
 					<div class="flex flex-col">
 					<header class="flex flex-col gap-6 p-6 text-slate-400">
 						<h3 class="text-3xl font-bold text-slate-700">
@@ -191,41 +189,24 @@ const params = [
 		<Heading>
 			<h2 slot="heading-title" class="font-bold text-[#ff6711] uppercase h2">Программы на выбор</h2>
 		</Heading>
-		<Hero>
-			<div slot="hero-content-left" class="prose lg:order-2">
-				<Badge title="подходит для 1-4 класса" />
-				<h2 class="font-black h2 my-4">Зов джунглей</h2>
 
-				<p>
-					В программе:
-				</p>
-				<p>Два ведущих - исследователя</p>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge title="подходит для 1-4 класса" />
+				<h2 class="font-black mt-0 mb-6">Зов джунглей</h2>
 
 				<p>
 					Ребята столкнутся с хитроумными ловушками и препятствиями, чтобы проверить свои силы от стрельбы из лука, до сбора экзотических фруктов.
 				</p>
-
 				<p>🎊 Программа идеально подходит для детей до 9 лет, гарантируя, что каждый малыш найдет что-то по душе</p>
-
 				<p>🌿 Давайте вместе покорим джунгли</p>
 
-				<div class="mt-8">
-					<Button url="/menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="size-5 inline-block"
-							aria-hidden="true"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-								clip-rule="evenodd"></path>
-						</svg>
-						View menu
-					</Button>
-				</div>
+				<p class="text-[#] font-medium">✔ Два ведущих - исследователя</p>
+				<p class="text-[#] font-medium">✔ Для детей до 9 лет</p>
+
+				<p class="italic text-md">Маленькие исследователи станут настоящими профессионалами! Вместе с нашими героями они отправятся в захватывающее путешествие, полное неожиданностей и приключений.</p>
+				<ButtonOrder title='Заказать программу' href = '#' />
+
 			</div>
 			<div slot="hero-content-right">
 				<Picture
@@ -234,8 +215,9 @@ const params = [
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
+					loading={"eager"}
+					fetchpriority={"high"}
 				/>
-				<p class="italic">Маленькие исследователи станут настоящими профессионалами! Вместе с нашими героями они отправятся в захватывающее путешествие, полное неожиданностей и приключений.</p>
 			</div>
 		</Hero>
 	</Section>

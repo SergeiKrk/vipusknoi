@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets"
+import wp from "~/assets/icons/icons8-whatsapp.gif"
+import tg from "~/assets/icons/icons8-telegram.gif"
+import call from "~/assets/icons/icons8-phone.gif"
+import callback from "~/assets/icons/icons8-incoming-call.gif"
+
+type ElCall = {
+  id: number;
+  title: string;
+  src: string;
+  img: ImageMetadata;
+}
+
+const elcalls: ElCall[] = [
+  {
+    id: 1,
+    title: "WhatsApp",
+    src: 'https://wa.me/79176113743',
+    img: wp,  
+  },
+  {
+    id: 2,
+    title: "Telegram",
+    src: 'https://t.me/+79176113743',
+    img: tg,  
+  },
+  {
+    id: 3,
+    title: "Позвонить",
+    src: 'tel:79176113743',
+    img: call,  
+  },
+  {
+    id: 3,
+    title: "Обратный звонок",
+    src: '#',
+    img: callback, 
+  },
+];
+---
+<!-- Component: Right sided fully rounded fab button with outside text -->
+<div class="fixed bottom-12 right-12 lg:hidden">
+    <span class="absolute hover:hidden -z-10 h-[48px] w-[48px] mt-8 animate-ping rounded-full bg-[#ff6711] opacity-80"></span>
+    <div class="flex flex-col-reverse gap-2 group">
+      <button class="relative z-50 inline-flex items-center self-center justify-center h-12 gap-2 px-6 text-sm font-medium tracking-wide text-white transition duration-300 rounded-full group whitespace-nowrap bg-cyan-700 hover:bg-cyan-600 focus:bg-cyan-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-cyan-300 disabled:bg-cyan-300 disabled:shadow-none">
+        <span class="relative transition duration-300 only:-mx-6 group-hover:rotate-45">
+          <span class="sr-only">Button description</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" aria-label="Plus icon" role="graphics-symbol">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+        </span>
+      </button>
+      {
+        elcalls.map(el => (
+        <div class="relative h-0 opacity-0 group-hover:h-12 group-hover:opacity-100">
+        <span class="absolute bg-cyan-100/70 px-4 rounded-full -start-32 top-0 mb-px flex h-0 items-center overflow-hidden text-sm font-medium text-cyan-700 opacity-0 transition delay-[0.1s] group-hover:h-12 group-hover:opacity-100">{el.title}</span>
+        <a href={el.src} class="relative inline-flex h-0 w-0 translate-y-2 items-center justify-center gap-2 self-center justify-self-center whitespace-nowrap rounded-full bg-cyan-50 px-6 text-sm font-medium tracking-wide text-cyan-700 opacity-0 transition delay-[0.05s] duration-300 hover:bg-cyan-100 hover:text-cyan-600 focus:bg-cyan-200 focus:text-cyan-700 focus-visible:outline-none disabled:cursor-not-allowed disabled:border-cyan-300 disabled:bg-cyan-100 disabled:text-cyan-400 disabled:shadow-none group-hover:h-12 group-hover:w-12 group-hover:translate-y-0 group-hover:opacity-100">
+          <span class="relative only:-mx-6">
+            <span class="sr-only">{el.title} button</span>
+            <Image class="p-2 gb-white rounded-full" src={el.img} alt={el.title} />
+          </span>
+        </a>
+      </div>
+        ))
+      }
+      
+    </div>
+  </div>
+  <!-- End Right sided fully rounded fab button with outside text -->

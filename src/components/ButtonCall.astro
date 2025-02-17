@@ -1,0 +1,15 @@
+---
+import IconPhone from "~/assets/icons/phone.svg";
+import { phone } from "~/data/config";
+---
+
+<a
+	href={phone.href}
+	class="not-prose flex items-center gap-x-3 hover:-translate-y-1 hover:-rotate-1 transition duration-300"
+>
+	<div class="text-right">
+		<p class="text-base/4">Позвонить</p>
+		<span class="text-brand-green font-bold text-base/6">{phone.label}</span>
+	</div>
+	<IconPhone class="bg-brand-red rounded-full p-2.5 size-12 text-white" />
+</a>

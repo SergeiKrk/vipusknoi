@@ -6,10 +6,10 @@
     "alt": "Выпускные в Speloe "
   },
   {
-    "id": 3,
-    "title": "pexels-enginakyurt",
-    "image": "/src/assets/images/gallery/speloe-2.jpg",
-    "alt": "Выпускные в Speloe 2"
+    "id": 5,
+    "title": "pexels-narda-yescas",
+    "image": "/src/assets/images/gallery/speloe-4.jpg",
+    "alt": "Выпускные в Speloe 4"
   },
   {
     "id": 4,
@@ -18,16 +18,16 @@
     "alt": "Выпускные в Speloe 3"
   },
   {
-    "id": 5,
-    "title": "pexels-narda-yescas",
-    "image": "/src/assets/images/gallery/speloe-4.jpg",
-    "alt": "Выпускные в Speloe 4"
-  },
-  {
     "id": 6,
     "title": "pexels-pixabay",
     "image": "/src/assets/images/gallery/speloe-5.jpg",
     "alt": "Выпускные в Speloe 5"
+  },
+  {
+    "id": 3,
+    "title": "pexels-enginakyurt",
+    "image": "/src/assets/images/gallery/speloe-2.jpg",
+    "alt": "Выпускные в Speloe 2"
   },
   {
     "id": 7,
