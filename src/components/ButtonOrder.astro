@@ -49,7 +49,8 @@ let valProgr = nameBtn === 'Подробнее' ? title : 'Программа н
             <p class="text-lg text-center font-bold text-[#277eb5] mt-5 mb-6">Куда отправить расчет?</p>
 
             <!-- Component: Rounded large basic input -->
-            <form class="max-w-sm mx-auto">
+            <form action="../send.php" method="POST" class="max-w-sm mx-auto">
+                <input type="hidden" name="FormName" value={id}>
                 <input type="hidden" name="Tarif" value={valTarif}>
                 <input type="hidden" name="Program" value={valProgr}>
                 <div class="flex flex-row gap-2 my-2">
@@ -102,7 +103,7 @@ let valProgr = nameBtn === 'Подробнее' ? title : 'Программа н
             
                 <button
                     class='w-full inline-flex no-underline items-center justify-center px-6 py-4 mt-2 mb-4 text-white text-xl transition-all duration-200 rounded-lg hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-lg shadow-[#ff6711] hover:shadow-lg'
-                    aria-label=`zakazat ${title}`
+                    aria-label=`zakazat ${id}`
                     role="button"
                 >
                     Получить расчет
