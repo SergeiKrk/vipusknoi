@@ -44,12 +44,8 @@ const params = [
 									</div>)}
 					</div>
 	
-					<a href="#" title="" class="animate__animated animate__rubberBand inline-flex no-underline items-center px-6 py-4 mt-8 font-[Flow] text-white text-lg transition-all duration-200 rounded-lg lg:mt-10 hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-2xl shadow-[#ff6711] hover:shadow-lg" role="button">
-						Подобрать программу
-						<svg class="w-6 h-6 ml-8 -mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-						</svg>
-					</a>
+					
+					<div class='mt-8'><ButtonOrder id="hero" title='Стартовый экран' nameBtn="Подобрать программу" /></div>
 	
 					<!-- <p class="mt-5 text-gray-600">Отправим вместе со стоимостью, сценарием и вариантами проведения</p> -->
 			</div>
@@ -118,9 +114,7 @@ const params = [
 						</li>
 						</ul>
 						<p class="text-sm text-gray-400 mt-8">До 20 человек, доплата за последующего участника программы - 800р. В стоимость входит бесплатное пребывание 3 родителей, доплата за последующих - 100р.</p>
-						<a href="#" title="" class="w-full inline-flex no-underline items-center justify-center px-6 py-4 mt-8 font-[Flow] text-white text-lg transition-all duration-200 rounded-lg lg:mt-10 hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-lg shadow-[#ff6711] hover:shadow-lg" role="button">
-							Заказать программу
-						</a>
+						<ButtonOrder id="standart" title='Пакет СТАНДАРТ' nameBtn="Заказать" />
 					</div>
 					</div>
 				</div>
@@ -175,9 +169,8 @@ const params = [
 						</li>
 						</ul>
 						<p class="text-sm text-gray-400 mt-8">До 20 человек, доплата за последующего участника программы - 800р. В стоимость входит бесплатное пребывание 3 родителей, доплата за последующих - 100р.</p>
-						<a href="#" title="" class="w-full inline-flex no-underline items-center justify-center px-6 py-4 mt-8 font-[Flow] text-white text-lg transition-all duration-200 rounded-lg lg:mt-10 hover:bg-[#277eb5] focus:bg-[#277eb5] bg-gradient-to-r from-[#ff6711] to-[#ff9e0d] hover:from-[#ff9e0d] hover:to-[#ff6711] shadow-lg shadow-[#ff6711] hover:shadow-lg" role="button">
-							Заказать программу
-						</a>
+						<ButtonOrder id="rasshirennyj" title='Пакет РАСШИРЕННЫЙ' nameBtn="Заказать" />
+						
 					</div>
 					</div>
 				</div>
@@ -187,6 +180,7 @@ const params = [
 		
 	</Section>
 
+	
 	
 	<div id="reviews"></div>
 	<!-- Reviews -->
@@ -259,7 +253,7 @@ const params = [
 				<p class="text-[#] font-medium">✔ Для детей до 9 лет</p>
 
 				<p class="italic text-md">Маленькие исследователи станут настоящими профессионалами! Вместе с нашими героями они отправятся в захватывающее путешествие, полное неожиданностей и приключений.</p>
-				<ButtonOrder title='Заказать программу' href = '#' />
+				<ButtonOrder id="zovdzhunglej" title='Зов джунглей' nameBtn="Подробнее" />
 
 			</div>
 			<div slot="hero-content-right">
@@ -289,7 +283,7 @@ const params = [
 				<p class="text-[#] font-medium">✔ Для детей до 9 лет</p>
 
 				<p class="italic text-md">Приглашаем всех юнных геймеров погрузиться в увлекательный мир своих любимых игр: Амонг Ас, Майнкрафт, Роблакс и Бравл Старс! Приготовьтесь к незабываемому времени, полному развлечений, дружбы и веселья.</p>
-				<ButtonOrder title='Заказать программу' href = '#' />
+				<ButtonOrder id="gamevecherinka" title='Game вечеринка' nameBtn="Подробнее" />
 
 			</div>
 			<div slot="hero-content-left">
@@ -319,7 +313,7 @@ const params = [
 			<p class="text-[#] font-medium">✔ Для детей до 14 лет</p>
 
 			<p class="italic text-md">Хотите ощутить себя участником легендарной передачи? Теперь у вас есть такая возможность! Подготовьтесь к незабываемым испытаниям.</p>
-			<ButtonOrder title='Заказать программу' href = '#' />
+			<ButtonOrder id="fortboyard" title='Форт Боярд' nameBtn="Подробнее" />
 
 		</div>
 		<div slot="hero-content-right">
@@ -350,7 +344,7 @@ const params = [
 			<p class="text-[#] font-medium">✔ Для детей до 14 лет</p>
 
 			<p class="italic text-md">Готовы к незабываемым испытаниям? Приглашаем вас на квест по мотивам сериала "Игра кальмара", адаптированный специально для детей.</p>
-			<ButtonOrder title='Заказать программу' href = '#' />
+			<ButtonOrder id="nedetskieigry" title='Game вечеринка' nameBtn="Подробнее" />
 
 		</div>
 		<div slot="hero-content-left">
@@ -378,7 +372,7 @@ const params = [
 
 			<p class="text-[#] font-medium">✔ Два зажигательных ведущих</p>
 			<p class="text-[#] font-medium">✔ Для детей до 14 лет</p>
-			<ButtonOrder title='Заказать программу' href = '#' />
+			<ButtonOrder id="topparty" title='Top Party 2025' nameBtn="Подробнее" />
 
 		</div>
 		<div slot="hero-content-right">
