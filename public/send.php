@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Отправка письма
         $mail->setFrom('zakaz@speloekids.ru', 'Speloekids Выпускной');
-        $mail->addAddress('kryukovs.ru@gmail.com', 'Получатель'); // Ваш адрес для получения
+        $mail->addAddress('speloe-kafe@yandex.ru', 'Получатель'); // Ваш адрес для получения
 
         // Настройки письма
         $mail->isHTML(true);
